@@ -13,10 +13,6 @@ fi
 # yadr
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
-# mpdenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
 # history
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
@@ -50,3 +46,6 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# mpdenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
