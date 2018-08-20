@@ -27,6 +27,15 @@
 
 ## Image
 
+### Shell Theme
+
+- Powerline
+- Ricty for Powerline
+
 ![](img/shell.png)
+
+### Peco
+
+- pipe to "peco"
 
 ![](img/peco.png)
