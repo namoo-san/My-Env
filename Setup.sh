@@ -1,5 +1,5 @@
 # [README]
-# Run on zsh.
+# Run on zsh
 # - Homebrew
 # - YADR
 # - Prezto
