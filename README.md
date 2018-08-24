@@ -1,6 +1,10 @@
 # Development
 [MyEnv] Setup for development.
 
+### Run.sh
+
+sh Run.sh
+
 ## Environment
 
 [Homebrew](https://brew.sh/index_ja)
