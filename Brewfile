@@ -1,54 +1,101 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "sanemat/font"
-brew "arp-scan"
-brew "ccrypt"
-brew "colordiff"
-brew "ctags"
-brew "ghi"
-brew "git"
-brew "go"
-brew "htop"
-brew "httpie"
-brew "hub"
-brew "jq"
-brew "jshon"
-brew "lolcat"
-brew "macvim"
-brew "midnight-commander"
-brew "nmap"
-brew "node", link: false
-brew "nodebrew"
-brew "nodenv"
-brew "nyancat"
-brew "peco"
-brew "pwgen"
-brew "pyenv"
-brew "qt"
-brew "reattach-to-user-namespace"
-brew "redis"
-brew "sl"
-brew "slackcat"
-brew "speedtest-cli"
-brew "the_silver_searcher"
-brew "thefuck"
-brew "tmux"
-brew "todolist"
-brew "yarn"
-cask "alfred"
-cask "atom"
-cask "divvy"
-cask "google-chrome"
-cask "google-drive-file-stream"
-cask "google-hangouts"
-cask "google-japanese-ime"
-cask "hyper"
-cask "iterm2"
-cask "java"
-cask "ngrok"
-cask "onyx"
-cask "powershell"
-cask "slack"
-cask "visual-studio-code"
+
+# tap repositories and their packages
+
+tap homebrew/core
+brew arp-scan
+brew autoconf
+brew azure-cli
+brew cairo
+brew ccrypt
+brew cscope
+brew ctags
+brew docker
+brew fontconfig
+brew fontforge
+brew freetype
+brew fribidi
+brew gdbm
+brew gettext
+brew ghi
+brew giflib
+brew git
+brew glib
+brew go
+brew graphite2
+brew harfbuzz
+brew htop
+brew hub
+brew icu4c
+brew jpeg
+brew jq
+brew libevent
+brew libffi
+brew libpcap
+brew libpng
+brew libspiro
+brew libtiff
+brew libtool
+brew libuninameslist
+brew lolcat
+brew lua
+brew luajit
+brew mas
+brew ncurses
+brew nmap
+brew node
+brew node-build
+brew nodenv
+brew nyancat
+brew oniguruma
+brew openssl
+brew pango
+brew pcre
+brew pcre2
+brew pixman
+brew pkg-config
+brew pwgen
+brew pyenv
+brew python
+brew python@2
+brew readline
+brew reattach-to-user-namespace
+brew sl
+brew slackcat
+brew speedtest-cli
+brew sqlite
+brew the_silver_searcher
+brew thefuck
+brew tmux
+brew todolist
+brew winexe
+brew xz
+brew yarn
+brew zsh
+
+tap homebrew/bundle
+
+tap homebrew/cask
+cask dbeaver-community
+cask docker
+cask google-chrome
+cask macdown
+cask onyx
+cask slack
+
+tap rcmdnk/file
+brew brew-file
+
+tap sanemat/font
+brew ricty
+
+# Other Cask applications
+cask divvy
+cask firefox
+cask google-japanese-ime
+cask ngrok
+cask powershell
+cask visual-studio-code
+
+# App Store applications
+appstore 409201541 Pages (7.3)
+appstore 497799835 Xcode (10.1)
