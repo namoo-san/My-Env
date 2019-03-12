@@ -26,12 +26,12 @@ brew install speedtest-cli
 brew install todolist
 brew install thefuck
 brew install yarn
-brew cask install divvy
+# brew cask install divvy
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install iterm2
 brew cask install ngrok
-brew cask install onyx
+# brew cask install onyx
 brew cask install powershell
 brew cask install slack
 brew cask install visual-studio-code
@@ -48,29 +48,29 @@ brew install go
 export LANG=ja_JP.UTF-8
 
 # pyenv path
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+sudo echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+sudo echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+sudo echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 # nodenv path
-echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(nodenv init -)"' >> ~/.zshrc
+sudo echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+sudo echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 
 # go path
-echo 'export GOPATH=$HOME/go' >> ~/.zshrc
-echo 'export PATH=$PATH:$GOPATH/bin' >>~/.zshrc
+sudo echo 'export GOPATH=$HOME/go' >> ~/.zshrc
+sudo echo 'export PATH=$PATH:$GOPATH/bin' >>~/.zshrc
 
 # Write all alias
-echo 'alias vscode="open -a Visual\ Studio\ Code"' >>~/.zshrc
-echo 'alias firefox="open -a Firefox"' >>~/.zshrc
-echo 'alias divvy="Divvy"' >>~/.zshrc
-echo 'alias nightowl="open -a Night\ Owl"' >>~/.zshrc
-echo 'alias slack="open -a Slack"' >>~/.zshrc
-echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
-echo 'alias ff="open -a FireFox"' >>~/.zshrc
-echo 'alias github="ff http://github.com"' >>~/.zshrc
-echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
-echo 'alias ff="open -a FireFox"' >>~/.zshrc
-echo 'alias github="ff http://github.com"' >>~/.zshrc
+sudo echo 'alias vscode="open -a Visual\ Studio\ Code"' >>~/.zshrc
+sudo echo 'alias firefox="open -a Firefox"' >>~/.zshrc
+sudo echo 'alias divvy="Divvy"' >>~/.zshrc
+sudo echo 'alias nightowl="open -a Night\ Owl"' >>~/.zshrc
+sudo echo 'alias slack="open -a Slack"' >>~/.zshrc
+sudo echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
+sudo echo 'alias ff="open -a FireFox"' >>~/.zshrc
+sudo echo 'alias github="ff http://github.com"' >>~/.zshrc
+sudo echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
+sudo echo 'alias ff="open -a FireFox"' >>~/.zshrc
+sudo echo 'alias github="ff http://github.com"' >>~/.zshrc
 
 # misc install
 source ~/.zshrc
@@ -83,6 +83,6 @@ nodenv global 10.1.0
 pyenv global 3.6.3
 
 # history settings
-echo 'HISTFILE=$HOME/.zsh-history' >>~/.zshrc
-echo 'HISTSIZE=100000' >>~/.zshrc
-echo 'SAVEHIST=1000000' >>~/.zshrc
+sudo echo 'HISTFILE=$HOME/.zsh-history' >>~/.zshrc
+sudo echo 'HISTSIZE=100000' >>~/.zshrc
+sudo echo 'SAVEHIST=1000000' >>~/.zshrc
