@@ -86,3 +86,11 @@ pyenv global 3.6.3
 sudo echo 'HISTFILE=$HOME/.zsh-history' >>~/.zshrc
 sudo echo 'HISTSIZE=100000' >>~/.zshrc
 sudo echo 'SAVEHIST=1000000' >>~/.zshrc
+
+# Ricty install
+brew tap sanemat/font
+brew install ricty
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
+
+sh ./VSCode-Plugins.sh
