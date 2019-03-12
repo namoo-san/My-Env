@@ -94,4 +94,3 @@ cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 
 sh ./VSCode-Plugins.sh
-sudo cp ./com.mizage.direct.Divvy.plist ~/Library/Preferences/com.mizage.direct.Divvy.plist
