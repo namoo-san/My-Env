@@ -36,6 +36,7 @@ brew cask install powershell
 brew cask install slack
 brew cask install visual-studio-code
 brew cask install firefox
+brew cask install homebrew/cask-versions/microsoft-remote-desktop-beta
 
 # Docker
 brew install docker
