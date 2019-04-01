@@ -21,7 +21,6 @@ PKief.material-icon-theme
 shardulm94.trailing-spaces
 zhuangtongfa.Material-theme
 Zignd.html-css-class-completion
-
 )
 
 for i in ${pkglist[@]}; do
