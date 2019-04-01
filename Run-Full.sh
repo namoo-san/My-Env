@@ -1,6 +1,6 @@
 # Splash
 echo "👀 WARNING"
-echo "Light-Env setup script for macOS"
+echo "Full-Env setup script for macOS"
 echo "This process takes 15 minutes⏰"
 sleep 10
 
