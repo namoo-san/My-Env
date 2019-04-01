@@ -1,9 +1,22 @@
 # Development
-[MyEnv] Setup for development.
 
-### Run.sh
+My macOS environment setup script.
 
+## Run.sh
+
+### Full environments setup
+
+``` bash
+# Run.sh
 sh Run.sh
+```
+
+### Light environments setup (beta)
+
+``` bash
+# Light environments
+$ Run-Light.sh
+```
 
 ## Environment
 
@@ -13,33 +26,6 @@ sh Run.sh
 
 [YADR](https://github.com/skwp/dotfiles)
 
-## ColorTheme
+## iTerm2 Color Schemes
 
-### iTerm2
-
-[iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
-
-### Visual Studio Code
-
-![](img/vscode2.png)
-
-![](img/vscode.png)
-
-[Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme)
-
-[One Dark Pro](https://github.com/Binaryify/OneDark-Pro)
-
-## Image
-
-### Shell Theme
-
-- Powerline
-- Ricty for Powerline
-
-![](img/shell.png)
-
-### Peco
-
-- pipe to "peco"
-
-![](img/peco.png)
+Download 👉 [iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
