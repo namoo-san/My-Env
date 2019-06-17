@@ -1,31 +1,55 @@
-# Development
+# 🔧 Development
 
 My macOS environment setup script.
 
-## Run.sh
+## 📦 Run.sh
 
-### Full environments setup
-
-``` bash
-# Run.sh
-sh Run.sh
-```
-
-### Light environments setup (beta)
+### 🚚 Full environments setup
 
 ``` bash
-# Light environments
-$ Run-Light.sh
+$ sh Run.sh
 ```
 
-## Environment
+### 🚗 Light environments setup (beta)
 
-[Homebrew](https://brew.sh/index_ja)
+``` bash
+$ sh Run-Light.sh
+```
 
-[Prezto](https://github.com/sorin-ionescu/prezto)
+## 🌏 Environment
 
-[YADR](https://github.com/skwp/dotfiles)
+### 🚚
 
-## iTerm2 Color Schemes
+``` text
+WIP
+
+```
+
+### 🚗
+
+``` text
+Homebrew
+YADR
+nodenv
+pyenv
+yarn
+
+Node 10.1.0
+Python 3.6.3
+```
+
+``` text
+Google Chrome
+Google Japanese IME
+iTerm2
+ngrok
+Slack
+VSCode
+Firefox
+```
+
+## 🎨 iTerm2 Color Schemes
 
 Download 👉 [iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+
+## 🔌 VSCode plugins
