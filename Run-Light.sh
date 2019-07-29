@@ -74,7 +74,6 @@ echo "📝 Writing environments path... - 🚩 Alias"
 sudo echo 'alias vscode="open -a Visual\ Studio\ Code"' >>~/.zshrc
 sudo echo 'alias firefox="open -a Firefox"' >>~/.zshrc
 sudo echo 'alias divvy="Divvy"' >>~/.zshrc
-sudo echo 'alias nightowl="open -a Night\ Owl"' >>~/.zshrc
 sudo echo 'alias slack="open -a Slack"' >>~/.zshrc
 sudo echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
 sudo echo 'alias ff="open -a FireFox"' >>~/.zshrc
@@ -96,6 +95,9 @@ nodenv install 10.1.0
 
 echo "💼 Install go amesh..."
 go get github.com/otiai10/amesh/amesh
+
+echo "💼 Install go dep..."
+go get -u github.com/golang/dep/cmd/dep
 
 echo "🙆 node 10.1.0"
 nodenv global 10.1.0
