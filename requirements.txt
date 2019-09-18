@@ -26,7 +26,7 @@ dominate==2.3.4
 entrypoints==0.2.3
 filelock==3.0.10
 -e git+https://github.com/pycqa/flake8@894c4ac9ee2a2309bfdf873a841cd9fc2f05df1b#egg=flake8
-Flask==1.0.2
+Flask==1.1.1
 Flask-API==1.0
 Flask-Bootstrap==3.3.7.1
 Flask-Cors==3.0.6
