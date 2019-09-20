@@ -22,7 +22,7 @@ dataclasses-json==0.0.11
 dnspython==1.15.0
 docformatter==1.0
 docutils==0.14
-dominate==2.3.4
+dominate==2.4.0
 entrypoints==0.2.3
 filelock==3.0.10
 -e git+https://github.com/pycqa/flake8@894c4ac9ee2a2309bfdf873a841cd9fc2f05df1b#egg=flake8
