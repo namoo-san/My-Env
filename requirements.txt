@@ -1,4 +1,4 @@
-amqp==2.4.1
+amqp==2.5.2
 asn1crypto==0.24.0
 astroid==2.1.0
 attrdict==2.0.1
