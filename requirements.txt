@@ -31,7 +31,7 @@ Flask-API==1.1
 Flask-Bootstrap==3.3.7.1
 Flask-Cors==3.0.8
 Flask-Failsafe==0.2
-flask-ldap3-login==0.9.15
+flask-ldap3-login==0.9.16
 Flask-Login==0.4.1
 Flask-Session==0.3.1
 Flask-SQLAlchemy==2.4.1
