@@ -1,6 +1,6 @@
 amqp==2.5.2
 asn1crypto==0.24.0
-astroid==2.1.0
+astroid==2.3.1
 attrdict==2.0.1
 autoflake==1.2
 autopep8==1.4.3
