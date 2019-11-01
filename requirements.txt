@@ -19,7 +19,7 @@ colorama==0.4.1
 cryptography==2.8
 dataclasses==0.6
 dataclasses-json==0.3.5
-dnspython==1.15.0
+dnspython==1.16.0
 docformatter==1.0
 docutils==0.14
 dominate==2.3.4
