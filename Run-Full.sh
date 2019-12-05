@@ -4,6 +4,9 @@ echo "Full-Env setup script for macOS"
 echo "This process takes 15 minutes⏰"
 sleep 10
 
+# Disable make .DS_Store
+defaults write com.apple.desktopservices DSDontWriteNetworkStores True
+
 # Install Homebrew
 echo "🎁 Install Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
