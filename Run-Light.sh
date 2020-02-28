@@ -48,6 +48,10 @@ brew cask install visual-studio-code
 echo "🎁 - 📦Firefox"
 brew cask install firefox
 
+echo "🔧 - Some miscellaneous"
+brew install exa
+brew install bat
+brew install procs
 
 # Write settings config
 echo "🔧 Setting shell language..."

@@ -72,6 +72,11 @@ brew install slackcat
 brew install speedtest-cli
 brew install todolist
 
+echo "🔧 - Some miscellaneous"
+brew install exa
+brew install bat
+brew install procs
+
 # Write settings config
 echo "🔧 Setting shell language..."
 export LANG=ja_JP.UTF-8
