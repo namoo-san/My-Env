@@ -2,30 +2,27 @@
 
 My macOS environment setup script 👀
 
+- macOS 開発環境
+- Visual Studio Code 拡張機能
+- 日常利用のアプリケーション
+
 ## 📦 Run.sh
 
 ### 🚚 Full environments setup
 
 ``` bash
-$ sh Run.sh
+sh Run.sh
 ```
 
 ### 🚗 Light environments setup (beta)
 
 ``` bash
-$ sh Run-Light.sh
+sh Run-Light.sh
 ```
 
 ## 🌏 Environment
 
-### 🚚
-
-``` text
-WIP
-
-```
-
-### 🚗
+### 🚗 macOS用の開発環境
 
 ``` text
 Homebrew
@@ -37,6 +34,8 @@ yarn
 Node 10.1.0
 Python 3.6.3
 ```
+
+### 📦 よく使うアプリケーション
 
 ``` text
 Google Chrome
@@ -54,30 +53,8 @@ Download 👉 [iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Sc
 
 ## 🔌 VSCode plugins
 
-🔧
+🔧 よく使う拡張機能は一括インストールできます👇
 
-
-``` text
-abusaidm.html-snippets
-CoenraadS.bracket-pair-colorizer
-DavidAnson.vscode-markdownlint
-dbaeumer.vscode-eslint
-donjayamanne.githistory
-eamodio.gitlens
-eserozvataf.one-dark-pro-monokai-darker
-formulahendry.auto-close-tag
-formulahendry.auto-rename-tag
-GrapeCity.gc-excelviewer
-jsjlewis96.one-dark-pro-italic-vivid
-mechatroner.rainbow-csv
-ms-python.python
-ms-vscode.azurecli
-ms-vscode.PowerShell
-octref.vetur
-oderwat.indent-rainbow
-PeterJausovec.vscode-docker
-PKief.material-icon-theme
-shardulm94.trailing-spaces
-zhuangtongfa.Material-theme
-Zignd.html-css-class-completion
+``` bash
+sh VSCode-Plugins.sh
 ```
