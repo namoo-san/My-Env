@@ -24,28 +24,44 @@ sh Run-Light.sh
 
 ### 🚗 macOS用の開発環境
 
-``` text
-Homebrew
-YADR
-nodenv
-pyenv
-yarn
-
-Node 10.1.0
-Python 3.6.3
-```
+- Homebrew
+- zsh
+- YADR
+- nodenv
+  - Node 10.1.0
+- pyenv
+  - Python 3.7.3
+- yarn
+- (Fonts) Ricty
+- Jupyter Lab
+- exa(with bat, procs)
 
 ### 📦 よく使うアプリケーション
 
-``` text
-Google Chrome
-Google Japanese IME
-iTerm2
-ngrok
-Slack
-VSCode
-Firefox
-```
+- Google Chrome
+- Google Japanese IME
+- iTerm2
+- ngrok
+- Slack
+- VSCode
+- Firefox
+- Powershell
+- Remote Desktop Beta
+- Docker
+
+### 🔧 その他便利ツール (Full)
+
+- arp-scan
+- ccrypt
+- ctags
+- jq
+- lolcat
+- nmap
+- nyancat
+- pwgen
+- sl
+- slackcat
+- speedtest-cli
 
 ## 🎨 iTerm2 Color Schemes
 
