@@ -118,8 +118,8 @@ echo "🚃 Loading zsh source..."
 source ~/.zshrc
 
 # Install python/node/go versions
-echo "💼 Install python 3.6.3..."
-CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.6.3
+echo "💼 Install python 3.7.3..."
+CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.7.3
 
 echo "💼 Install node 10.1.0..."
 nodenv install 10.1.0
@@ -133,8 +133,8 @@ go get -u github.com/golang/dep/cmd/dep
 echo "🙆 node 10.1.0"
 nodenv global 10.1.0
 
-echo "🙆 python 3.6.3"
-pyenv global 3.6.3
+echo "🙆 python 3.7.3"
+pyenv global 3.7.3
 
 # History settings
 echo "📋 History settings..."
@@ -156,6 +156,10 @@ reset
 # Python packages install
 echo "📦 Install python packages..."
 pip install -r requirements.txt
+
+# Jupyter lab
+echo "📦 Install Jupyter Lab..."
+pip install jupyterlab
 
 # Done.
 echo "⚡⚡⚡ Done! ⚡⚡⚡"
