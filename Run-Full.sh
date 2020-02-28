@@ -73,7 +73,6 @@ brew install pwgen
 brew install sl
 brew install slackcat
 brew install speedtest-cli
-brew install todolist
 
 echo "🔧 - Some miscellaneous"
 brew install exa
