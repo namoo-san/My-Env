@@ -139,5 +139,5 @@ urllib3==1.25.7
 wcwidth==0.1.8
 webencodings==0.5.1
 websocket-client==0.44.0
-zipp==2.2.1
+zipp==3.1.0
 >>>>>>> dd078a5f0bacffd97ef2d5365667f8b08f940274
