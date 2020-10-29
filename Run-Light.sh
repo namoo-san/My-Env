@@ -78,6 +78,7 @@ sudo echo 'export PATH=$PATH:$GOPATH/bin' >>~/.zshrc
 
 # Write all alias
 echo "📝 Writing environments path... - 🚩 Alias"
+sudo echo 'alias reload="exec $SHELL -l"' >>~/.zshrc
 sudo echo 'alias vscode="open -a Visual\ Studio\ Code"' >>~/.zshrc
 sudo echo 'alias firefox="open -a Firefox"' >>~/.zshrc
 sudo echo 'alias divvy="Divvy"' >>~/.zshrc
