@@ -31,25 +31,25 @@ echo "🎁 - 📦 yarn"
 brew install yarn
 
 echo "🎁 - 📦Google Chrome"
-brew cask install google-chrome
+brew install --cask  google-chrome
 
 echo "🎁 - 📦Google Japanese IME"
-brew cask install google-japanese-ime
+brew install --cask  google-japanese-ime
 
 echo "🎁 - 📦iTerm2"
-brew cask install iterm2
+brew install --cask  iterm2
 
 echo "🎁 - 📦ngrok"
-brew cask install ngrok
+brew install --cask  ngrok
 
 echo "🎁 - 📦Slack"
-brew cask install slack
+brew install --cask  slack
 
 echo "🎁 - 📦VSCode"
-brew cask install visual-studio-code
+brew install --cask  visual-studio-code
 
 echo "🎁 - 📦Firefox"
-brew cask install firefox
+brew install --cask  firefox
 
 echo "🔧 - Some miscellaneous"
 brew install exa
