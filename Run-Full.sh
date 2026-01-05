@@ -27,91 +27,89 @@ brew install pyenv
 # Install packages & cask
 echo "🎁 Install Homebrew dependences..."
 
-echo "🎁 - 📦 yarn"
-brew install yarn
+# Cask packages
+cask_packages=(
+  "google-chrome"
+  "google-japanese-ime"
+  "iterm2"
+  "ngrok"
+  "slack"
+  "visual-studio-code"
+  "firefox"
+  "powershell"
+  "homebrew/cask-versions/microsoft-remote-desktop-beta"
+  "docker"
+)
 
-echo "🎁 - 📦Google Chrome"
-brew install --cask google-chrome
+for package in "${cask_packages[@]}"; do
+  echo "🎁 - 📦 ${package}"
+  brew install --cask "${package}"
+done
 
-echo "🎁 - 📦Google Japanese IME"
-brew install --cask google-japanese-ime
-
-echo "🎁 - 📦iTerm2"
-brew install --cask iterm2
-
-echo "🎁 - 📦ngrok"
-brew install --cask ngrok
-
-echo "🎁 - 📦Slack"
-brew install --cask slack
-
-echo "🎁 - 📦VSCode"
-brew install --cask visual-studio-code
-
-echo "🎁 - 📦Firefox"
-brew install --cask firefox
-
-echo "🎁 - 📦Powershell"
-brew install --cask powershell
-
-echo "🎁 - 📦Remote Desktop Beta"
-brew install --cask homebrew/cask-versions/microsoft-remote-desktop-beta
-
-echo "🎁 - 📦Docker"
+# Docker (also needs non-cask install)
+echo "🎁 - 📦 docker (non-cask)"
 brew install docker
-brew install --cask docker
 
-echo "🎁 - 🔧Other packages..."
-brew install arp-scan
-brew install ccrypt
-brew install ctags
-brew install jq
-brew install lolcat
-brew install nmap
-brew install nyancat
-brew install pwgen
-brew install sl
-brew install slackcat
-brew install speedtest-cli
+# Regular packages
+regular_packages=(
+  "yarn"
+  "arp-scan"
+  "ccrypt"
+  "ctags"
+  "jq"
+  "lolcat"
+  "nmap"
+  "nyancat"
+  "pwgen"
+  "sl"
+  "slackcat"
+  "speedtest-cli"
+  "exa"
+  "bat"
+  "procs"
+)
 
-echo "🔧 - Some miscellaneous"
-brew install exa
-brew install bat
-brew install procs
+for package in "${regular_packages[@]}"; do
+  echo "🎁 - 📦 ${package}"
+  brew install "${package}"
+done
 
 # Write settings config
 echo "🔧 Setting shell language..."
 export LANG=ja_JP.UTF-8
 
-# pyenv path
-echo "📝 Writing environments path... - 📍 pyenv"
-sudo echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-sudo echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-sudo echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+# Environment paths
+env_paths=(
+  'export PYENV_ROOT="$HOME/.pyenv"'
+  'export PATH="$PYENV_ROOT/bin:$PATH"'
+  'eval "$(pyenv init -)"'
+  'export PATH="$HOME/.nodenv/bin:$PATH"'
+  'eval "$(nodenv init -)"'
+  'export GOPATH=$HOME/go'
+  'export PATH=$PATH:$GOPATH/bin'
+)
 
-# nodenv path
-echo "📝 Writing environments path... - 📍 nodenv"
-sudo echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
-sudo echo 'eval "$(nodenv init -)"' >> ~/.zshrc
-
-# go path
-echo "📝 Writing environments path... - 📍 go"
-sudo echo 'export GOPATH=$HOME/go' >> ~/.zshrc
-sudo echo 'export PATH=$PATH:$GOPATH/bin' >>~/.zshrc
+echo "📝 Writing environments path..."
+for path_config in "${env_paths[@]}"; do
+  sudo echo "${path_config}" >> ~/.zshrc
+done
 
 # Write all alias
-echo "📝 Writing environments path... - 🚩 Alias"
-sudo echo 'alias reload="exec $SHELL -l"' >>~/.zshrc
-sudo echo 'alias vscode="open -a Visual\ Studio\ Code"' >>~/.zshrc
-sudo echo 'alias firefox="open -a Firefox"' >>~/.zshrc
-sudo echo 'alias divvy="Divvy"' >>~/.zshrc
-sudo echo 'alias slack="open -a Slack"' >>~/.zshrc
-sudo echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
-sudo echo 'alias ff="open -a FireFox"' >>~/.zshrc
-sudo echo 'alias github="ff http://github.com"' >>~/.zshrc
-sudo echo 'alias powershell="/usr/local/microsoft/powershell/6/pwsh"' >>~/.zshrc
-sudo echo 'alias ff="open -a FireFox"' >>~/.zshrc
-sudo echo 'alias github="ff http://github.com"' >>~/.zshrc
+aliases=(
+  'alias reload="exec $SHELL -l"'
+  'alias vscode="open -a Visual\ Studio\ Code"'
+  'alias firefox="open -a Firefox"'
+  'alias divvy="Divvy"'
+  'alias slack="open -a Slack"'
+  'alias powershell="/usr/local/microsoft/powershell/6/pwsh"'
+  'alias ff="open -a FireFox"'
+  'alias github="ff http://github.com"'
+)
+
+echo "📝 Writing aliases..."
+for alias_cmd in "${aliases[@]}"; do
+  sudo echo "${alias_cmd}" >>~/.zshrc
+done
 
 # Apply zsh source
 echo "🚃 Loading zsh source..."
@@ -120,27 +118,38 @@ source ~/.zshrc
 # Install python/node/go versions
 echo "💼 Install python 3.7.3..."
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.7.3
+pyenv global 3.7.3
 
 echo "💼 Install node 10.1.0..."
 nodenv install 10.1.0
-
-echo "💼 Install go amesh..."
-go get github.com/otiai10/amesh/amesh
-
-echo "💼 Install go dep..."
-go get -u github.com/golang/dep/cmd/dep
-
-echo "🙆 node 10.1.0"
 nodenv global 10.1.0
 
-echo "🙆 python 3.7.3"
-pyenv global 3.7.3
+# Go packages
+go_packages=(
+  "github.com/otiai10/amesh/amesh"
+  "github.com/golang/dep/cmd/dep"
+)
+
+for package in "${go_packages[@]}"; do
+  echo "💼 Install go ${package}..."
+  if [[ "${package}" == *"dep"* ]]; then
+    go get -u "${package}"
+  else
+    go get "${package}"
+  fi
+done
 
 # History settings
+history_settings=(
+  'HISTFILE=$HOME/.zsh-history'
+  'HISTSIZE=100000'
+  'SAVEHIST=1000000'
+)
+
 echo "📋 History settings..."
-sudo echo 'HISTFILE=$HOME/.zsh-history' >>~/.zshrc
-sudo echo 'HISTSIZE=100000' >>~/.zshrc
-sudo echo 'SAVEHIST=1000000' >>~/.zshrc
+for setting in "${history_settings[@]}"; do
+  sudo echo "${setting}" >>~/.zshrc
+done
 
 # VSCode settings
 echo "🎨 Install VSCode plugins..."
