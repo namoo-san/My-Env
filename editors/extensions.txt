@@ -1,0 +1,13 @@
+# Shared extension list for Cursor / VS Code / Windsurf
+EditorConfig.EditorConfig
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+eamodio.gitlens
+GitHub.vscode-pull-request-github
+mechatroner.rainbow-csv
+ms-azuretools.vscode-docker
+ms-python.python
+ms-python.vscode-pylance
+ms-vscode.powershell
+DavidAnson.vscode-markdownlint
+Vue.volar
