@@ -38,7 +38,10 @@ setup_shell_rc() {
   append_line_once 'eval "$(direnv hook zsh)"' "$zshrc"
   append_line_once 'alias reload="exec $SHELL -l"' "$zshrc"
   append_line_once 'alias ls="eza --group-directories-first"' "$zshrc"
-  append_line_once 'alias ll="eza -la --group-directories-first"' "$zshrc"
+  append_line_once 'alias l="eza -1 --group-directories-first"' "$zshrc"
+  append_line_once 'alias la="eza -la --group-directories-first"' "$zshrc"
+  append_line_once 'alias ll="eza -l --group-directories-first"' "$zshrc"
+  append_line_once 'alias tree="eza --tree --group-directories-first"' "$zshrc"
   append_line_once 'alias cat="bat --paging=never"' "$zshrc"
 }
 

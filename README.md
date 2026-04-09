@@ -69,6 +69,8 @@ cd ~/dev/My-Env
 - `python@2` や古い固定 runtime 前提はやめた
 - `Ricty` 前提は廃止
   - いま選ぶなら `HackGen` `UDEV Gothic` `JetBrains Mono Nerd Font` あたりのほうが楽
+- `eza` 導入に合わせて `ls` `l` `la` `ll` `tree` の alias を自動で追加
+  - 旧環境で自然に使っていた一覧系コマンドをなるべくそのまま移行できるようにしてある
 - VS Code専用スクリプトはやめて VS Code互換エディタ共通運用に変更
 - 古い拡張 ID は整理済み
   - `Bracket Pair Colorizer` は不要
