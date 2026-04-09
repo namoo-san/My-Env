@@ -1,76 +1,91 @@
-# 🔧 Development
+# My-Env
 
-My macOS environment setup script 👀
+macOS 向けの開発環境セットアップ repo
 
-- macOS 開発環境
-- Visual Studio Code 拡張機能
-- 日常利用のアプリケーション
+2026 時点でかなり古くなっていた構成を整理して
+今は `brew bundle` + `mise` + VS Code互換エディタ拡張 の最小構成に寄せている
 
-## 📦 Run.sh
+## 方針
 
-### 🚚 Full environments setup
+- パッケージ管理: Homebrew + `Brewfile`
+- 言語ランタイム: `mise`
+- エディタ: Cursor / VS Code / Windsurf みたいな VS Code互換エディタを想定
+- 拡張一覧: `editors/extensions.txt`
+- dotfiles: repo には含めない
+  - 旧 `YADR` は完全に対象外
+  - 必要なら `chezmoi` か自前 repo で分離管理
 
-``` bash
-sh Run.sh
+## セットアップ
+
+```bash
+cd ~/dev/My-Env
+./bootstrap.sh
 ```
 
-### 🚗 Light environments setup (beta)
+これでやること
 
-``` bash
-sh Run-Light.sh
+- Homebrew の導入確認
+- `brew bundle` で CLI / GUI ツール導入
+- `mise` で Node.js / Python 導入
+- 利用可能なら editor CLI で拡張一括導入
+  - 優先順: `cursor` → `code` → `windsurf`
+
+## エディタ拡張だけ入れたいとき
+
+```bash
+./install-editor-extensions.sh
 ```
 
-## 🌏 Environment
+`editors/extensions.txt` を見て
+使える CLI に対してまとめて入れる
 
-### 🚗 macOS用の開発環境
+## いま残しているもの
 
-- Homebrew
-- zsh
-- YADR
-- nodenv
-  - Node 10.1.0
-- pyenv
-  - Python 3.7.3
-- yarn
-- (Fonts) Ricty
-- Jupyter Lab
-- exa(with bat, procs)
+- `bootstrap.sh` : セットアップ入口
+- `Brewfile` : Homebrew 管理対象
+- `.mise.toml` : Node.js / Python バージョン
+- `editors/extensions.txt` : VS Code互換拡張の共通リスト
+- `install-editor-extensions.sh` : 拡張一括導入
+- `iTerm2-Settings/` : iTerm2 設定バックアップ
 
-### 📦 よく使うアプリケーション
+## 今回切ったもの
 
-- Google Chrome
-- Google Japanese IME
-- iTerm2
-- ngrok
-- Slack
-- VSCode
-- Firefox
-- Powershell
-- Remote Desktop Beta
-- Docker
+- `Run-Full.sh`
+- `Run-Light.sh`
+- `Ricty.sh`
+- `requirements.txt`
+- `VSCode.extension`
+- `VSCode-Plugins.sh`
+- `install-vscode-extensions.sh`
+- `vscode/` ディレクトリ
 
-### 🔧 その他便利ツール (Full)
+残しておく理由が薄かった
+特にこのへんは 旧 macOS / 旧 VS Code / 旧 Python 環境前提の名残で
+今の再現性や保守性をむしろ落としてた
 
-- arp-scan
-- ccrypt
-- ctags
-- jq
-- lolcat
-- nmap
-- nyancat
-- pwgen
-- sl
-- slackcat
-- speedtest-cli
+## 変更メモ
 
-## 🎨 iTerm2 Color Schemes
+- `nodenv` / `pyenv` 系の分離管理はやめて `mise` に統一
+- `python@2` や古い固定 runtime 前提はやめた
+- `Ricty` 前提は廃止
+  - いま選ぶなら `HackGen` `UDEV Gothic` `JetBrains Mono Nerd Font` あたりのほうが楽
+- VS Code専用スクリプトはやめて VS Code互換エディタ共通運用に変更
+- 古い拡張 ID は整理済み
+  - `Bracket Pair Colorizer` は不要
+  - `Vetur` より `Vue.volar`
+  - `PeterJausovec.vscode-docker` より `ms-azuretools.vscode-docker`
 
-Download 👉 [iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+## トレードオフ
 
-## 🔌 VSCode plugins
+- 旧スクリプト互換は捨てた
+  - 昔のファイル名を直接叩く運用は壊れる
+- Python パッケージ一式の自動投入もやめた
+  - グローバル `requirements.txt` 方式は再現性が低く 用途不明な依存を抱えやすい
+  - Python 依存は各プロジェクトごとに `uv` / `pip` / `pyproject.toml` 側で管理する前提
+- エディタは VS Code互換に寄せている
+  - Neovim 専用や JetBrains 専用の設定 repo ではない
 
-🔧 よく使う拡張機能は一括インストールできます👇
+## 補足
 
-``` bash
-sh VSCode-Plugins.sh
-```
+Docker は `docker` cask で Docker Desktop を入れる構成
+CLI だけでいいなら Colima + docker formula に寄せたほうが軽い
